@@ -177,7 +177,9 @@ let s:vim_bg = ['bg',   'bg'  ]
 let s:vim_fg = ['fg',   'fg'  ]
 let s:none   = ['NONE', 'NONE']
 
-if &background=="light"
+let s:background = &background
+
+if s:background=="light"
   let s:base0  = s:ui.grey9
   let s:base1  = s:ui.grey8
   let s:base2  = s:ui.grey7
@@ -188,7 +190,7 @@ if &background=="light"
   let s:base02 = s:ui.grey2
   let s:base03 = s:ui.grey3
   let s:base04 = s:ui.grey4
-else
+elseif s:background=="dark"
   let s:base0  = s:ui.grey0
   let s:base1  = s:ui.grey1
   let s:base2  = s:ui.grey2
