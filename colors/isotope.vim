@@ -420,7 +420,7 @@ call s:HL('FoldColumn', g:primary, s:base01, s:italic . s:underline)
 " }}}
 " Cursor: {{{
 
-call s:HL('Cursor', s:base00, s:base2, s:inverse)
+call s:HL('Cursor', g:primary, s:base2, s:inverse)
 
 " }}}
 " Syntax Highlighting: {{{
@@ -474,7 +474,7 @@ call s:HL('Typedef', s:ui.yellow)
 if version >= 700
   call s:HL('Pmenu', s:base2, s:base02)
   call s:HL('PmenuSel', s:base02, g:primary, s:bold)
-  call s:HL('PmenuSbar', s:none, s:base00)
+  call s:HL('PmenuSbar', s:none, s:base01)
   call s:HL('PmenuThumb', s:none, s:base2)
 endif
 
