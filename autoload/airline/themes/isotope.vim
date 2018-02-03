@@ -130,7 +130,7 @@ function! airline#themes#isotope#refresh()
   " ctrlp. Note that this is optional, and if you do not define ctrlp colors
   " they will be chosen automatically from the existing palette.
   if !get(g:, 'loaded_ctrlp', 0)
-    finish
+    return 1
   endif
   let g:airline#themes#isotope#palette.ctrlp = airline#extensions#ctrlp#generate_color_map(
         \ [ s:base0[0], s:base01[0], s:base0[1], s:base01[1], '' ],
